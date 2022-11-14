@@ -22,20 +22,6 @@ jobs:
         run: ./myls -i
       - name: run myls -R
         run: ./myls -R
-      - name: run myls -iRl
-        run: ./myls -iRL
       - name: check files 
         if: always()
-        run: ls 
-      - name: copy test script to student dir
-        if: always()
-        run: cp /tmp/testscript/A4.py .
-      - name: run test script
-        if: always()
-        run: python3 A4.py
-      - name: remove testscript from student dir
-        if: always()
-        run: rm -f A4.py
-      - name: check grade files
-        if: always()
-        run: cat Student_grade.txt
+        run: ls
